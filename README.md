@@ -1,4 +1,4 @@
-Durand Hangout with expressions analisyng
+Durand Hangout with expressions analysing
 ==============
 
 # See a demo on youtube
