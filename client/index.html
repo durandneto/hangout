@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script defer src="face-api.min.js"></script>
+    <style>
+      video {
+        background-color: black;
+        position: relative;
+      }
+      .img-expression {
+        position: absolute;
+        width: 100px;
+        left: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container"></div>
+    <br />
+    <input type="button" id="start" onclick="start()" value="Call"></input>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aspnet-signalr/1.1.4/signalr.min.js"></script>
+    <script src="connection.js"></script>
+    <script type="text/javascript">
+          const M = new MultiStream('wss://' + window.location.hostname + ':8443')
+          M.setAvailableSlots(1)
+          // M.onMessage()
+        function start(){
+          M.start()
+        }
+        </script>
+  </body>
+</html>
